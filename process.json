@@ -1,0 +1,9 @@
+{
+  "apps": [{
+    "name": "strecku-twitter",
+    "script": "server.js",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}
