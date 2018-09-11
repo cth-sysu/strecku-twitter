@@ -19,7 +19,7 @@ module.exports = express()
 .post('/purchases', (req, res, next) => {
   const purchase = req.body;
   if (!purchase.product) {
-    return res.end();
+    return res.status(400).end();
   }
   const dryrun = !!req.query.dryrun;
   const time = new Date(purchase.time);
