@@ -48,6 +48,6 @@ module.exports = express()
     }
     res.end();
   })
-  .catch(err => console.error(err));
+  .catch(err => res.status(503).end());
 })
 .listen(5101, 'localhost');
