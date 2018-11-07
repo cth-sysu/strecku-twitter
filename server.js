@@ -28,8 +28,8 @@ module.exports = express()
   Promise.all([
     // OrvU name (fallback to strecku user name)
     request({
-      uri: `festu.se/api/members/name?mail=${purchase.user.email}`,
-      headers: { Authorization: config.get('auth.festu') },
+      uri: `https://festu.se/api/members/name?mail=${purchase.user.email}`,
+      headers: { authorization: config.get('auth.festu') },
       json: true
     })
     .catch(() => purchase.user),
