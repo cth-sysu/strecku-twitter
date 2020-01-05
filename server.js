@@ -1,3 +1,8 @@
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.log('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
 const Twitter = require('twitter');
 const express = require('express');
 const request = require('request-promise');
